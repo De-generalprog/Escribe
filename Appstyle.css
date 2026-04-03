@@ -358,7 +358,6 @@ nav a:hover {
     gap: 16px;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
 }
 
 #powerful {
@@ -677,16 +676,132 @@ nav a:hover {
  }
 
  /* fixed layout that looks the same everywhere */
- @media (max-width: 480px) {
+@media (max-width: 1024px) {
+
+  /* NAV */
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .left-menu,
+  .right-menu {
+    gap: 20px;
+  }
+
+  /* GRID → 2 columns */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* FLEX SECTIONS WRAP */
+  .container,
+  .container2,
+  .container3,
+  .section-card,
+  .flex,
+  .easy-row,
+  .Strait {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* CIRCULAR BOX FIX */
+  .circular-box {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  /* NAV STACK */
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .left-menu,
+  .right-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 0;
+  }
+
+  /* LOGO FIX */
+  .logo-wrapper {
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  /* GRID → 1 column */
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* STACK EVERYTHING */
+  .container,
+  .container2,
+  .container3,
+  .section-card,
+  .flex,
+  .flex-wrap,
+  .easy-row,
+  .Strait,
+  .paragh-profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* IMAGE CONTROL */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* BOXES */
+  .circular-box {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  /* FOOTER STACK */
+  .footer-buttom {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .global {
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 480px) {
 
   body {
     padding: 0 10px;
   }
 
+  /* BUTTON FULL WIDTH */
+  .cta-button,
   .hero button,
   .section-card button,
-  .flex button {
+  .flex button,
+  .style-container button {
     width: 100%;
+  }
+
+  /* REDUCE BIG SPACING */
+  .container,
+  .paragraph {
+    padding: 15px;
   }
 
   .grid-item {
